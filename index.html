@@ -13,12 +13,10 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
-
         body {
             line-height: 1.6;
             color: #333;
         }
-
         /* Герой секция */
         .hero {
             background: linear-gradient(135deg, #1a237e, #0d47a1);
@@ -26,17 +24,14 @@
             padding: 120px 20px;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
         }
-
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
-
         /* Кнопка */
         .cta-button {
             display: inline-block;
@@ -48,17 +43,14 @@
             font-weight: 500;
             transition: transform 0.3s;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
         }
-
         /* Особенности */
         .features {
             padding: 80px 20px;
             background: #f5f5f5;
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -66,7 +58,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .feature-card {
             background: white;
             padding: 30px;
@@ -74,13 +65,11 @@
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
         .feature-card i {
             font-size: 2.5rem;
             color: #1a237e;
             margin-bottom: 20px;
         }
-
         /* О компании */
         .about {
             padding: 80px 20px;
@@ -90,13 +79,11 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .about-text {
             flex: 1;
             min-width: 300px;
             padding-right: 50px;
         }
-
         .about-image {
             flex: 1;
             min-width: 300px;
@@ -104,14 +91,12 @@
             background: url('https://source.unsplash.com/random/800x600') center/cover;
             border-radius: 10px;
         }
-
         /* Контакты */
         .contact {
             background: #1a237e;
             color: white;
             padding: 80px 20px;
         }
-
         .contact-wrapper {
             max-width: 800px;
             margin: 0 auto;
@@ -119,7 +104,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
-
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -128,12 +112,10 @@
             border: none;
             border-radius: 5px;
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
-
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
@@ -146,7 +128,6 @@
         <p>INNOVATIONS AND THE WORLD</p>
         <a href="#contact" class="cta-button">START TO CONNECT</a>
     </section>
-
     <section class="features">
         <div class="features-grid">
             <div class="feature-card">
@@ -166,7 +147,6 @@
             </div>
         </div>
     </section>
-
     <section class="about">
         <div class="about-text">
             <h2>ABOUT</h2>
@@ -174,19 +154,28 @@
         </div>
         <div class="about-image"></div>
     </section>
-
     <section class="contact" id="contact">
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>CONTACT US</h3>
-                <p>Email: 700ea@proton.me</p>
-                <p>PHONE:</p>
+                <p>Email: 700ea@proton.me</p> <p></p> <p></p>
+                <p></p>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Имя" required>
-                <input type="email" placeholder="Email" required>
-                <textarea rows="5" placeholder="MESSAGE" required></textarea>
-                <button type="submit" class="cta-button">SUBMIT</button>
+            <form 
+                action="https://formspree.io/f/xovjpabv" 
+                method="POST" 
+                class="contact-form"
+            >
+                <label>
+                    Your email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit" class="cta-button">Send</button>
             </form>
         </div>
     </section>
