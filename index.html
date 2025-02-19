@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>700EA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопка */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ff9100;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Особенности */
+        .features {
+            padding: 80px 20px;
+            background: #f5f5f5;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        /* О компании */
+        .about {
+            padding: 80px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('https://source.unsplash.com/random/800x600') center/cover;
+            border-radius: 10px;
+        }
+
+        /* Контакты */
+        .contact {
+            background: #1a237e;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .contact-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>700EA</h1>
+        <p>INNOVATIONS AND THE WORLD</p>
+        <a href="#contact" class="cta-button">START TO CONNECT</a>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>QUICK START</h3>
+                <p></p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>WARRANT</h3>
+                <p></p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>PERFECT</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-text">
+            <h2>ABOUT</h2>
+            <p>700EA - WE ARE FOR YOU.</p>
+        </div>
+        <div class="about-image"></div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p>Email: 700ea@proton.me</p>
+                <p>PHONE:</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="MESSAGE" required></textarea>
+                <button type="submit" class="cta-button">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
